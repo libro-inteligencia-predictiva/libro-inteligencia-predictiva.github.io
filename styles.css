@@ -42,12 +42,7 @@ h1 span { font-weight: 400; } h1 i { color: var(--yellow); font-style: normal; }
 .hero-art { position: relative; min-height: 510px; display: grid; place-items: center; }
 .hero-art::before { content: ""; position: absolute; inset: 4% 0 12% 12%; border: 1px solid var(--line); transform: rotate(5deg); }
 .art-index { position: absolute; top: 0; right: 0; display: flex; gap: 2rem; font: .6rem/1.5 var(--mono); letter-spacing: .1em; }
-.book-cover { position: relative; width: min(77%, 360px); aspect-ratio: .72; padding: 1.5rem; display: flex; flex-direction: column; background: var(--blue); color: var(--navy); box-shadow: -16px 16px 0 rgba(168, 200, 234, .16), 0 30px 70px rgba(0, 0, 0, .22); transform: rotate(-4deg); }
-.cover-top, .cover-bottom { display: flex; justify-content: space-between; gap: 1rem; font: 600 .55rem/1.5 var(--mono); letter-spacing: .08em; }
-.cover-title { margin-top: 16%; font-size: clamp(1.8rem, 3.6vw, 3.35rem); font-weight: 400; letter-spacing: -.07em; line-height: 1; }
-.cover-title strong { font-weight: 700; }.cover-title > span { color: var(--yellow); }
-.cover-graphic { margin: auto 0 1.2rem; background: var(--navy); color: var(--blue); padding: .8rem; }
-.cover-graphic svg { display: block; width: 100%; }
+.book-cover { position: relative; display: block; width: min(77%, 360px); height: auto; box-shadow: -16px 16px 0 rgba(168, 200, 234, .16), 0 30px 70px rgba(0, 0, 0, .22); transform: rotate(-4deg); }
 .art-note { position: absolute; right: -1%; bottom: 2%; border-left: 2px solid var(--yellow); padding-left: .8rem; font: .6rem/1.55 var(--mono); letter-spacing: .08em; }
 .art-note strong { display: block; color: var(--yellow); }
 .manifesto { background: var(--blue); color: var(--navy); }
@@ -85,7 +80,7 @@ pre { margin: 0; overflow-x: auto; padding: 2rem 1.3rem; font: .75rem/1.9 var(--
 }
 @media (max-width: 600px) {
   .shell { width: min(100% - 2rem, 1300px); }.header-inner { align-items: flex-start; flex-direction: column; gap: 1.2rem; padding-block: 1.3rem; }.navigation { width: 100%; gap: .8rem 1.2rem; flex-wrap: wrap; }.nav-download { padding: .4rem .55rem; }
-  .hero { padding-block: 4rem; }.hero-meta { margin-top: 3rem; }.hero-art { min-height: 390px; }.book-cover { width: 70%; max-width: 260px; padding: 1.1rem; }.cover-title { font-size: 2.2rem; }.art-index { font-size: .5rem; }.art-note { right: 0; }
+  .hero { padding-block: 4rem; }.hero-meta { margin-top: 3rem; }.hero-art { min-height: 390px; }.book-cover { width: 70%; max-width: 260px; }.art-index { font-size: .5rem; }.art-note { right: 0; bottom: -1.6rem; }
   .manifesto-grid, .method, .roadmap { padding-block: 5rem; }.manifesto-index { display: none; }.section-heading { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2.5rem; }.chapter summary { grid-template-columns: 2.5rem 1fr 1rem; }.chapter-body { padding-left: 3.5rem; padding-right: 0; flex-direction: column; gap: .7rem; }.download-inner { flex-direction: column; align-items: flex-start; padding-block: 5rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
